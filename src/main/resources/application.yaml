@@ -2,9 +2,6 @@ server:
   port: 8081
 
 spring:
-  profiles:
-    active: local
-
   application:
     name: user-service
 
@@ -14,4 +11,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://lcalhost:8761/eureka
