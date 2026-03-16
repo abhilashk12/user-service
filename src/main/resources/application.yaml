@@ -5,10 +5,13 @@ spring:
   application:
     name: user-service
 
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+
   config:
     import: optional:configserver:${CONFIG_SERVER_URL}
 
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL}
+      defaultZone: ${EUREKA_URL:http://discovery-server:8761/eureka}
